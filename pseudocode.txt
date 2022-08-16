@@ -4,8 +4,15 @@ Header
 
 
 About: Guessing game. 
+
 - Preset profile about a person within our group. 
+    - Gather info of each person 
+      - 4 profiles
+    - load each string into variables
+      - $var1, $var2, $var3, $var4
+      
 - The user will have to type in the name of the person they think the profile belongs to.
+    - 
 - The user's input will match with a name variable and if the input is correct, there will be a output telling the user "correct!". 
 - If the input doesn't match the variable, use get one more try "try again" 
 - If the input doesn't match the variable again "you lost! Game over!" 
