@@ -1,2 +1,11 @@
 Whoswho
 Header
+
+
+
+About: Guessing game. 
+<li> Preset profile about a person within our group. </li>
+<li> The user will have to type in the name of the person they think the profile belongs to. </li>
+<li> The user's input will match with a name variable and if the input is correct, there will be a output telling the user "correct!". </li>
+<li> If the input doesn't match the variable, use get one more try "try again" </li>
+<li>If the input doesn't match the variable again "you lost! Game over!" </li>
