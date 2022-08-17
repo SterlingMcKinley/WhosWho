@@ -7,7 +7,7 @@ sterling="I love ancient Egyptian culture & civilization.\nI want to retire in M
 
 
 ## Game description
-echo -e "Lets play a game. I will tell you about a person in Group 6 and you will guess that person. \nYou have TWO tries to guess correctly."
+echo -e "Lets play a game. I will tell you about a person in Group 6 and you will guess that person. \nYou have TWO tries to guess correctly. These are your options: Surbona, Ishtaar, Ayo, Sterling"
 
 
 ### Add 1st variable 
