@@ -17,6 +17,11 @@ sterling="I love ancient Egyptian culture & civilization.\nI want to retire in M
 #########################################################################
 
 ### 2nd variable
+
+
+#########################################################################
+
+### 3rd Variable
 read -p "Do you want to continue playing the game? >>> " input
 if [[ $input == "yes" ]]
     then
@@ -46,11 +51,6 @@ if [[ $input == "yes" ]]
 else 
 exit 0
 fi
-
-#########################################################################
-
-### 3rd Variable
-
 #########################################################################
 
 echo -e "Lets play a game. I will tell you about a person in Group 6 and you will guess that person. \nYou have TWO tries to guess correctly."
