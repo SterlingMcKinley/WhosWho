@@ -12,37 +12,37 @@ echo -e "Lets play a game. I will tell you about a person in Group 6 and you wil
 
 ### Add 1st variable 
 
-echo "---------------------------------------------------"
-echo "Here are the clues...."
-numOftries=2
-for ((i=1; i<=$numOftries; i++));
-do 
-echo -e "$ayo"
-echo " "
-read -p "Guess who this is? >>>>> " ans
-ans=$(echo $ans | tr [A-Z] [a-z])
-
-if [[ $ans == "ayo" ]];
-    then
-    echo "-----------------------------"
-    echo "THAT IS CORRECT! CONGRATS!" 
-    echo "-----------------------------" 
-break
+    echo "---------------------------------------------------"
+    echo "Here are the clues...."
+    numOftries=2
+    for ((i=1; i<=$numOftries; i++));
+    do 
+	echo -e "$ayo"
+    	echo " "
+	read -p "Guess who this is? >>>>> " ans
+        ans=$(echo $ans | tr [A-Z] [a-z])
+	if [[ $ans == "ayo" ]];
+        then
+		echo "-----------------------------"
+             	echo "THAT IS CORRECT! CONGRATS!" 
+	 	echo "-----------------------------" 
+	break
+	fi
+	if [[ $answer != $ayo && $i != $numOftries ]];
+        then 
+               	echo "-----------------------------------"
+		echo "That is incorrect! Try again!"
+        	echo "-----------------------------------"
+	else 
+		echo "-----------------------------------"
+                echo "YOU LOST GAME OVER!"
+        	echo "-----------------------------------"
+	fi
+   done;
+else
+	echo "Maybe next time!"
+exit 0
 fi
-if [[ $answer != $ayo && $i != $numOftries ]];
-    then 
-    echo "-----------------------------------"
-    echo "That is incorrect! Try again!"
-    echo "-----------------------------------"
-else 
-    echo "-----------------------------------"
-    echo "YOU LOST GAME OVER!"
-    echo "-----------------------------------"
-fi
-done;
-
-
-#########################################################################
 
 ### 2nd variable
 read -p "Do you want to continue playing the game? >>> " input
