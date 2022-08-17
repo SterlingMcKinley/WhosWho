@@ -6,8 +6,8 @@ ishtaar="Hotpot is my favorite type of meal. \nFall is my favorite season. \nBla
 suborna="I love long walks and connecting with the nature. \nI have a cat. \nMy Favorite food is thai."
 sterling="I love ancient Egyptian culture & civilization.\nI want to retire in Miami, FL. \nI want to be a DevOps Engineer."
 
-
-
+## Game description
+echo -e "Lets play a game. I will tell you about a person in Group 6 and you will guess that person. \nYou have TWO tries to guess correctly."
 
 
 ### Add 1st variable 
@@ -17,6 +17,7 @@ sterling="I love ancient Egyptian culture & civilization.\nI want to retire in M
 #########################################################################
 
 ### 2nd variable
+read -p "Do you want to continue playing the game? >>> " input
 
 
 #########################################################################
@@ -33,8 +34,11 @@ if [[ $input == "yes" ]]
     read -p "Guess who this is? >>>>> " ans
     if [[ $ans == "suborna" ]];
     then 
+    echo "-----------------------------"
     echo "THAT IS CORRECT! CONGRATS!" 
+    echo "-----------------------------"
     else
+    echo "-----------------------------"
     echo "That is incorrect. Try again!"
     echo "-----------------------------"
     echo -e "$suborna" 
@@ -42,7 +46,7 @@ if [[ $input == "yes" ]]
     read -p ">>>>> " ans1
         if [[ $ans1  == "suborna" ]];
         then 
-            echo "YOU GOT IT RIGHT."
+            echo "YOU GOT IT RIGHT. CONGRATS!"
         else
             echo "YOU LOST. GAME OVER."
             exit 0
@@ -51,29 +55,46 @@ if [[ $input == "yes" ]]
 else 
 exit 0
 fi
+
 #########################################################################
 
-echo -e "Lets play a game. I will tell you about a person in Group 6 and you will guess that person. \nYou have TWO tries to guess correctly."
-echo " "
-echo "Here are the clues...."
-echo "$sterling"
-echo " "
-read -p "Guess who this is? >>>>> " ans
-if [[ $ans == "sterling" ]];
+## 4th Variable
+read -p "Do you want to continue playing the game? >>> " input
+if [[ $input == "yes" ]]
 then
-    echo "THAT IS CORRECT! CONGRATS!" 
-else
-    echo "That is incorrect. Try again!"
-fi
-	echo "Guess again.";
-    echo " " 
-    echo "$sterling" 
+    ## adding 4th variable
     echo " "
-    read -p ">>>>> " ans1
-if [[ $ans1  == "sterling" ]];
-then 
-    echo "YOU GOT IT RIGHT. CONGRATS! PLAY AGAIN SOMETIME."
+    echo "Here are the clues...."
+    echo -e "$sterling"
+    echo " "
+    read -p "Guess who this is? >>>>> " ans
+    if [[ $ans == "sterling" ]];
+    then
+        echo "-----------------------------"
+        echo "THAT IS CORRECT! CONGRATS!" 
+        echo "-----------------------------"
+    else
+        echo "-----------------------------"
+        echo "That is incorrect. Try again!"
+        echo "-----------------------------"
+        echo -e "$sterling"
+        echo " "
+        read -p ">>>>> " ans1
+        if [[ $ans1  == "sterling" ]];
+        then 
+            echo "YOU GOT IT RIGHT. CONGRATS!"
+        else
+            echo "YOU LOST. GAME OVER."
+            exit 0
+        fi
+    fi
 else
- 	echo "YOU LOST. GAME OVER."
- 	exit 0
+exit 0
 fi
+
+## Ending the game
+echo ""
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+echo "We have reached the end of the game. Thank you for playing!!"
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+
