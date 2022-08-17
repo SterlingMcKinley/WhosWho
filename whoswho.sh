@@ -112,6 +112,8 @@ then
             echo "-----------------------------"
             echo "YOU LOST. GAME OVER."  
             echo "-----------------------------"
+            echo "YOU LOST. GAME OVER."
+            echo "-----------------------------"         
 	    fi
     fi
 else 
