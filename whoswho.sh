@@ -39,15 +39,12 @@ echo -e "Lets play a game. I will tell you about a person in Group 6 and you wil
         	echo "-----------------------------------"
 	fi
    done;
-<<<<<<< HEAD
-=======
 else
 	echo "Maybe next time!"
 exit 0
 fi
->>>>>>> b8edcff (removing line entries)
 
-### 2nd variable
+## 2nd variable
 read -p "Do you want to continue playing the game? >>> " input
 input=$(echo "$input" | cut -c 1 | tr [A-Z] [a-z])
 
