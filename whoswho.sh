@@ -39,10 +39,6 @@ echo -e "Lets play a game. I will tell you about a person in Group 6 and you wil
         	echo "-----------------------------------"
 	fi
    done;
-else
-	echo "Maybe next time!"
-exit 0
-fi
 
 ### 2nd variable
 read -p "Do you want to continue playing the game? >>> " input
