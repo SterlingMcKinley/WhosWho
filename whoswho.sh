@@ -18,7 +18,7 @@ echo -e "Lets play a game. I will tell you about a person in Group 6 and you wil
 
 ### 2nd variable
 read -p "Do you want to continue playing the game? >>> " input
-input=$(echo $input | cut -c 1 | tr [A-Z} [a-z])
+input=$(echo "$input" | cut -c 1 | tr [A-Z] [a-z])
 if [[ $input == 'y' ]];
     then
     echo "---------------------------------------------------"
@@ -29,7 +29,8 @@ if [[ $input == 'y' ]];
 	echo -e "$ishtaar"
     	echo " "
 	read -p "Guess who this is? >>>>> " ans
-        if [[ $ans == "ishtaar" ]];
+        ans=$(echo $ans | tr [A-Z] [a-z])
+	if [[ $ans == "ishtaar" ]];
         then
 		echo "-----------------------------"
              	echo "THAT IS CORRECT! CONGRATS!" 
@@ -38,10 +39,14 @@ if [[ $input == 'y' ]];
 	fi
 	if [[ $answer != $ishtaar && $i != $numOftries ]];
         then 
-                echo "That is incorrect! Try again!"
-        else 
+               	echo "-----------------------------------"
+		echo "That is incorrect! Try again!"
+        	echo "-----------------------------------"
+	else 
+		echo "-----------------------------------"
                 echo "YOU LOST GAME OVER!"
-        fi
+        	echo "-----------------------------------"
+	fi
    done;
 else
 	echo "Maybe next time!"
@@ -51,6 +56,7 @@ fi
 
 ### 3rd Variable
 read -p "Do you want to continue playing the game? >>> " input
+input=$(echo "$input" | cut -c 1 | tr [A-Z] [a-z])
 if [[ $input == "y" ]]
 then
     ## adding 3rd variable
@@ -59,6 +65,7 @@ then
     echo -e "$suborna"
     echo " "
     read -p "Guess who this is? >>>>> " ans
+    ans=$(echo $ans | tr [A-Z] [a-z])
     if [[ $ans == "suborna" ]];
     then 
     echo "-----------------------------"
@@ -76,8 +83,8 @@ then
             echo "YOU GOT IT RIGHT. CONGRATS!"
         else
             echo "YOU LOST. GAME OVER."
-            exit 0
-        fi
+	#i removed the exit 0 that was here because the script stops running if the user gets both tries wrong and it wont move onto the next profile. Was that intentional?         
+	fi
     fi
 else 
 exit 0
@@ -87,6 +94,7 @@ fi
 
 ## 4th Variable
 read -p "Do you want to continue playing the game? >>> " input
+input=$(echo "$input" | cut -c 1 | tr [A-Z] [a-z])
 if [[ $input == "y" ]]
 then
     ## adding 4th variable
@@ -95,6 +103,7 @@ then
     echo -e "$sterling"
     echo " "
     read -p "Guess who this is? >>>>> " ans
+    ans=$(echo $ans | tr [A-Z] [a-z])
     if [[ $ans == "sterling" ]];
     then
         echo "-----------------------------"
