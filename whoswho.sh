@@ -12,42 +12,34 @@ echo -e "Lets play a game. I will tell you about a person in Group 6 and you wil
 
 ### Add 1st variable 
 
-read -p "Do you want to continue playing the game? >>> " input
-input=$(echo "$input" | cut -c 1 | tr [A-Z] [a-z])
-if [[ $input == 'y' ]];
-    then
-    echo "---------------------------------------------------"
-    echo "Here are the clues...."
-    numOftries=2
-    for ((i=1; i<=$numOftries; i++));
-    do 
-	echo -e "$ayo"
-    	echo " "
-	read -p "Guess who this is? >>>>> " ans
-        ans=$(echo $ans | tr [A-Z] [a-z])
-	if [[ $ans == "ayo" ]];
-        then
-		echo "-----------------------------"
-             	echo "THAT IS CORRECT! CONGRATS!" 
-	 	echo "-----------------------------" 
-	break
-	fi
-	if [[ $answer != $ayo && $i != $numOftries ]];
-        then 
-               	echo "-----------------------------------"
-		echo "That is incorrect! Try again!"
-        	echo "-----------------------------------"
-	else 
-		echo "-----------------------------------"
-                echo "YOU LOST GAME OVER!"
-        	echo "-----------------------------------"
-	fi
-   done;
-else
-	echo "Maybe next time!"
-exit 0
-fi
+echo "---------------------------------------------------"
+echo "Here are the clues...."
+numOftries=2
+for ((i=1; i<=$numOftries; i++));
+do 
+echo -e "$ayo"
+echo " "
+read -p "Guess who this is? >>>>> " ans
+ans=$(echo $ans | tr [A-Z] [a-z])
 
+if [[ $ans == "ayo" ]];
+    then
+    echo "-----------------------------"
+    echo "THAT IS CORRECT! CONGRATS!" 
+    echo "-----------------------------" 
+break
+fi
+if [[ $answer != $ayo && $i != $numOftries ]];
+    then 
+    echo "-----------------------------------"
+    echo "That is incorrect! Try again!"
+    echo "-----------------------------------"
+else 
+    echo "-----------------------------------"
+    echo "YOU LOST GAME OVER!"
+    echo "-----------------------------------"
+fi
+done;
 
 
 #########################################################################
@@ -55,6 +47,7 @@ fi
 ### 2nd variable
 read -p "Do you want to continue playing the game? >>> " input
 input=$(echo "$input" | cut -c 1 | tr [A-Z] [a-z])
+
 if [[ $input == 'y' ]];
     then
     echo "---------------------------------------------------"
@@ -63,36 +56,37 @@ if [[ $input == 'y' ]];
     for ((i=1; i<=$numOftries; i++));
     do 
 	echo -e "$ishtaar"
-    	echo " "
+    echo " "
 	read -p "Guess who this is? >>>>> " ans
         ans=$(echo $ans | tr [A-Z] [a-z])
 	if [[ $ans == "ishtaar" ]];
         then
 		echo "-----------------------------"
-             	echo "THAT IS CORRECT! CONGRATS!" 
+        echo "THAT IS CORRECT! CONGRATS!" 
 	 	echo "-----------------------------" 
 	break
 	fi
 	if [[ $answer != $ishtaar && $i != $numOftries ]];
         then 
-               	echo "-----------------------------------"
+        echo "-----------------------------------"
 		echo "That is incorrect! Try again!"
-        	echo "-----------------------------------"
+        echo "-----------------------------------"
 	else 
 		echo "-----------------------------------"
-                echo "YOU LOST GAME OVER!"
-        	echo "-----------------------------------"
+        echo "YOU LOST GAME OVER!"
+        echo "-----------------------------------"
 	fi
    done;
 else
 	echo "Maybe next time!"
-exit 0
+    exit 0
 fi
 #########################################################################
 
 ### 3rd Variable
 read -p "Do you want to continue playing the game? >>> " input
 input=$(echo "$input" | cut -c 1 | tr [A-Z] [a-z])
+
 if [[ $input == "y" ]]
 then
     ## adding 3rd variable
@@ -102,6 +96,7 @@ then
     echo " "
     read -p "Guess who this is? >>>>> " ans
     ans=$(echo $ans | tr [A-Z] [a-z])
+
     if [[ $ans == "suborna" ]];
     then 
     echo "-----------------------------"
@@ -113,16 +108,18 @@ then
     echo "-----------------------------"
     echo -e "$suborna" 
     echo " "
-    read -p ">>>>> " ans1
+    read -p "Guess who this is? >>>>> " ans1
         if [[ $ans1  == "suborna" ]];
         then 
             echo "YOU GOT IT RIGHT. CONGRATS!"
         else
-            echo "YOU LOST. GAME OVER."
-	#i removed the exit 0 that was here because the script stops running if the user gets both tries wrong and it wont move onto the next profile. Was that intentional?         
-	fi
+            echo "-----------------------------"
+            echo "YOU LOST. GAME OVER."  
+            echo "-----------------------------"
+	    fi
     fi
 else 
+echo "Maybe next time!"
 exit 0
 fi
 
@@ -151,16 +148,18 @@ then
         echo "-----------------------------"
         echo -e "$sterling"
         echo " "
-        read -p ">>>>> " ans1
+        read -p "Guess who this is? >>>>> " ans1
         if [[ $ans1  == "sterling" ]];
         then 
             echo "YOU GOT IT RIGHT. CONGRATS!"
         else
+            echo "-----------------------------"
             echo "YOU LOST. GAME OVER."
-            exit 0
+            echo "-----------------------------"
         fi
     fi
 else
+echo "Maybe next time!"
 exit 0
 fi
 
