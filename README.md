@@ -6,10 +6,10 @@ The script is written in Bash
 
 
 <h1> Collaborators: </h1>
-<li> Group Lead : Sterling Mckinley </li>
+<li> <b> Group Lead </b>  : Sterling </li>
 
-<li> Presenter: Ishtaar Desravines </li>
+<li> <b> Presenter </b> : Ishtaar </li>
 
-<li> Supervisor: Suborna Nath </li>
+<li> <b> Supervisor </b> : Suborna Nath </li>
 
-<li> Documenter: Ayo Akinkugbe </li>
+<li> <b> Documenter </b> : Ayo Akinkugbe </li>
