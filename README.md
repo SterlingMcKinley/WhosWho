@@ -10,6 +10,6 @@ The script is written in Bash
 
 <li> <b> Presenter </b> : Ishtaar </li>
 
-<li> <b> Supervisor </b> : Suborna Nath </li>
+<li> <b> Supervisor </b> : Suborna </li>
 
-<li> <b> Documenter </b> : Ayo Akinkugbe </li>
+<li> <b> Documenter </b> : Ayo </li>
