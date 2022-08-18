@@ -5,7 +5,7 @@ WhosWho is a guessing game using "if else" statements to match input variables f
 The script is written in Bash
 
 
-Collaborators:
+<h1> Collaborators: </h1>
 <li> Group Lead : Sterling Mckinley </li>
 
 <li> Presenter: Ishtaar Desravines </li>
