@@ -5,11 +5,11 @@ WhosWho is a guessing game using "if else" statements to match input variables f
 The script is written in Bash
 
 
-Collaborators:
-<li> Group Lead : Sterling Mckinley </li>
+<h1> Collaborators: </h1>
+<li> <b> Group Lead </b>  : Sterling </li>
 
-<li> Presenter: Ishtaar Desravines </li>
+<li> <b> Presenter </b> : Ishtaar </li>
 
-<li> Supervisor: Suborna Nath </li>
+<li> <b> Supervisor </b> : Suborna </li>
 
-<li> Documenter: Ayo Akinkugbe </li>
+<li> <b> Documenter </b> : Ayo </li>
